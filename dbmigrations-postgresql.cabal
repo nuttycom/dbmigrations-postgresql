@@ -1,5 +1,6 @@
+cabal-version:       >= 1.10
 Name:                dbmigrations-postgresql
-Version:             2.0.0
+Version:             2.1.0
 Synopsis:            The dbmigrations tool built for PostgreSQL databases
 Description:         This package contains the executable to work with
                      the dbmigrations package when the database backend
@@ -19,7 +20,6 @@ Maintainer:          Jonathan Daugherty <cygnus@foobox.com>
 Build-Type:          Simple
 License:             BSD3
 License-File:        LICENSE
-Cabal-Version:       >= 1.10
 
 Source-Repository head
   type:     git
@@ -46,7 +46,7 @@ test-suite dbmigrations-postgresql-tests
   type: exitcode-stdio-1.0
   Build-Depends:
     base >= 4 && < 5,
-    dbmigrations >= 2,
+    dbmigrations >= 2.2,
     HDBC >= 2.2.1,
     HDBC-postgresql == 2.3.2.4,
     process >= 1.1,
@@ -62,4 +62,4 @@ test-suite dbmigrations-postgresql-tests
     ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields
 
   Hs-Source-Dirs:  test
-  Main-is:         TestDriver.hs
+  Main-is:         Main.hs

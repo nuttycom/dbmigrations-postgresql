@@ -13,6 +13,7 @@ import System.Exit
 import System.IO ( stderr )
 import System.Process ( system )
 import Test.HUnit
+import Data.ByteString.UTF8 as BSU
 
 data PostgreSQLBackendConnection =
     forall a. HDBC.IConnection a => HDBCConnection a
@@ -23,7 +24,7 @@ instance BackendConnection PostgreSQLBackendConnection where
     commit (HDBCConnection c) = HDBC.commit c
     withTransaction (HDBCConnection c) transaction =
         HDBC.withTransaction c (transaction . HDBCConnection)
-    getTables (HDBCConnection c) = HDBC.getTables c
+    getTables (HDBCConnection c) = fmap BSU.fromString <$> HDBC.getTables c
     catchAll (HDBCConnection _) act handler =
         act `catches` [ Handler (\(_ :: HDBC.SqlError) -> handler) ]
 
