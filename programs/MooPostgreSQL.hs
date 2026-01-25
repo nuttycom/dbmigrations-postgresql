@@ -9,8 +9,8 @@ import System.Environment (getArgs)
 import System.Exit
 
 import Database.Schema.Migrations.Backend.HDBC (hdbcBackend)
-import Moo.Core
-import Moo.Main
+import DBM.Core
+import DBM.Main
 
 main :: IO ()
 main = do

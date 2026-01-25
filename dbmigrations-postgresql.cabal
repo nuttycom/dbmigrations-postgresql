@@ -1,6 +1,6 @@
 cabal-version:       >= 1.10
 Name:                dbmigrations-postgresql
-Version:             2.1.0
+Version:             3.0.0
 Synopsis:            The dbmigrations tool built for PostgreSQL databases
 Description:         This package contains the executable to work with
                      the dbmigrations package when the database backend
@@ -29,7 +29,7 @@ Executable moo-postgresql
   default-language: Haskell2010
   Build-Depends:
     base >= 4 && < 5,
-    dbmigrations >= 2,
+    dbmigrations >= 3,
     HDBC-postgresql
 
   if impl(ghc >= 6.12.0)
@@ -46,7 +46,7 @@ test-suite dbmigrations-postgresql-tests
   type: exitcode-stdio-1.0
   Build-Depends:
     base >= 4 && < 5,
-    dbmigrations >= 2.2,
+    dbmigrations >= 3,
     HDBC >= 2.2.1,
     HDBC-postgresql >= 2.3.2.4,
     process >= 1.1,
