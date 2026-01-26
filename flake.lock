@@ -8,17 +8,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1769367998,
-        "narHash": "sha256-+asn+o0SsVU51IzQh+/sQ9CrkkdcKd8MU8pZc4jUSBM=",
+        "lastModified": 1769403042,
+        "narHash": "sha256-4wywuuLXFdCiMsIAHppYAIF/6qGxZDB0ylqfFLMunjU=",
         "owner": "haskell-github-trust",
         "repo": "dbmigrations",
-        "rev": "d870aa2bdc6ac219bfdd182bcada3a9534dc23a8",
+        "rev": "e2840f47f819252f1cc9c6010b5c7bff5d4df763",
         "type": "github"
       },
       "original": {
         "owner": "haskell-github-trust",
         "repo": "dbmigrations",
-        "rev": "d870aa2bdc6ac219bfdd182bcada3a9534dc23a8",
+        "rev": "e2840f47f819252f1cc9c6010b5c7bff5d4df763",
         "type": "github"
       }
     },
